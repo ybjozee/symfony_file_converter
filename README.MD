@@ -58,7 +58,7 @@ npm run dev
 7. Run the application 
 
 ```bash
-$ symfony serve
+symfony serve
 ```
 
 [2]: https://git-scm.com/
