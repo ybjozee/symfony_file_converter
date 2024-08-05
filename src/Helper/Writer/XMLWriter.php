@@ -14,12 +14,10 @@ final class XMLWriter extends AbstractWriter {
 
         $contentToWrite = $this->getContentAsArray($content);
 
-        $inflector = new EnglishInflector();
-        $childXML = $inflector->singularize($this->fileName)[0];
-        $xml = new SimpleXMLElement("<$this->fileName/>");
+        $xml = new SimpleXMLElement("<items/>");
 
         foreach ($contentToWrite as $item) {
-            $child = $xml->addChild($childXML);
+            $child = $xml->addChild("item");
             foreach ($item as $key => $value) {
                 $child->addChild($key, $value);
             }
