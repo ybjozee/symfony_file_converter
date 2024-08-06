@@ -132,7 +132,7 @@ class Conversion {
     public function setNameToSaveAs(string $nameToSaveAs)
     : void {
 
-        $this->nameToSaveAs = $nameToSaveAs;
+        $this->nameToSaveAs = preg_replace('/\.[A-Za-z]*/', '', $nameToSaveAs);
     }
 
     public function getConversionDate()
